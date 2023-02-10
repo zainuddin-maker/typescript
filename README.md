@@ -9,4 +9,5 @@ TypeScript  adalah bahasa pemrograman open source yang dikembangkan oleh tim Mic
 
 ### **SO WHAT IS TYPESCRIPT ?**
 
-![Chat Preview](https://github.com/zainuddin-maker/react-native/blob/master/carakerja.jpg?raw=true)
+![Chat Preview](https://github.com/zainuddin-maker/typescript/blob/master/diagrams-01%20-%20int.png?raw=true)
+

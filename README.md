@@ -18,3 +18,13 @@ Benefit from TS :
 How typescript working :
 
 ![Chat Preview](https://github.com/zainuddin-maker/typescript/blob/master/diagrams-04%20-%20run.drawio.png?raw=true)
+
+summary :
+![Chat Preview](https://github.com/zainuddin-maker/typescript/blob/master/diagrams-07%20-%20summary.drawio.png?raw=true)
+---
+
+### **ENVIRONTMENT SETUP**
+---
+
+
+

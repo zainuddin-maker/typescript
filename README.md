@@ -66,9 +66,18 @@ run inside the folder
 
 ## **What is a Type System?**
 
+![Chat Preview](https://github.com/zainuddin-maker/typescript/blob/master/diagrams-06%20-%20interfaces.png?raw=true)
 
 
+--- 
+ ### **understand basic types in TS**
 
+
+Type is Easy way to refer to the different properties + functions that a `value` has.
+
+value in Javascript and TypeScript is anything that we can assign to a variable.
+
+easy way to refer to different properties and functions is example is we write "red" , that mean it is a value that has all the properties methods that we assume that a string has like CharAt(),include() and etc .
 
 
 

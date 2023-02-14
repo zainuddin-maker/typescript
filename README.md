@@ -227,6 +227,76 @@ General Strategy for Reusable Code :
 - Create functions that accept arguments that are typed with interfaces.
 - Object/classes can decide to 'implement' a given interface to work with a function.
 
+![Chat Preview](https://github.com/zainuddin-maker/typescript/blob/master/diagrams-08%20-%20imp.png?raw=true)
+
+we can see the example in `interface.ts`
+
+---
+## **Classes**
+
+>Classes is Blueprint to create an object with some fields(values) and methods (functions) to represent a 'thing'.
+
+in class we can use another class in new class using `extends` , and inside that class we can override the initial function.
+
+different between ES2015 classes and classes in TS :
+- The Existence of something called modifiers.
+
+Modifiers are a keyword so we can place on different methods and properties inside of a class :
+ - public (default) : This method can be called any where ,any time 
+ - private : This method can only be called by other methods in class 
+ - protected : This method can be called by other methods in this class, or by other methods in child classes (inheritance).
+
+
+ only resason to marked something as private is to restrict the different methods that other developer can call. if we might have a method that very deeply manipulates a class and maybe theres some like really complicated, special way to use it , and maybe you and I dont trust other developers to call that method safely .
+
+ to add input or field to class we use `constructor()`
+
+ ```javascript
+ class Vehicle {
+    color : string;
+
+    constructor(color:string){
+        this.color = color;
+    }
+ }
+ ```
+
+ can change to 
+
+ ```typescript
+ class Vehicle {
+    constructor (public color:string){
+
+    }
+ }
+ ```
+
+ modifier can implementation in field.
+
+ different between : 
+ ```javascript
+    constructor(public wheels:number, color ;string){
+        super(color)
+    }
+ ```
+ and 
+  ```javascript
+    constructor(public wheels:number,public color ;string){
+        super(color)
+    }
+ ```
+
+ in first example , that not make new `color` , but refer to parent color , but in example 2 if we use composer than that make new color.
+
+ we can see the example in `classes.ts`
+
+ --- 
+ we make app for implement design patern in Typescript
+
+
+
+
+
 
 
 

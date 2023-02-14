@@ -79,6 +79,157 @@ value in Javascript and TypeScript is anything that we can assign to a variable.
 
 easy way to refer to different properties and functions is example is we write "red" , that mean it is a value that has all the properties methods that we assume that a string has like CharAt(),include() and etc .
 
+![Chat Preview](https://github.com/zainuddin-maker/typescript/blob/master/diagrams-07%20-%20basic%20types.png?raw=true)
+
+
+thre is 2 types :
+- Primitive Types ( very basic types  ) : number,boolean,void,undifined,string,symbol,null 
+- Object Types () : functions , arrays , classes,objects.
+
+why do we care about types :
+- Types are used by the Typescript Compiler to analyze our code for erroes.
+- Types allow other engineers to understand what values are flowing around our codebase.
+
+where do we use types ? 
+### **`EVERYWHERE`**
+
+---
+
+Type Annotations + Type Inference 
+
+- Variables
+- Functions
+- Objects 
+
+>Type annotations -> code we add to tell Typescript what type of value a variable will refer to.
+
+>Type inference -> Typescript tries to figure out what type of value a varibale refers to.
+
+
+so the main different between type annotations and Type inference is in Type annotations we (developers) tell typescript the type whereas type inference is Typescript guesses the type.
+
+example for annotations variable we can see in `variables.ts`.
+
+for understanding unference we will make some example :
+
+```
+const color = 'red'
+```
+
+`const color` is variable declaration and `'red'` us variable initialization .
+than if declaration and initialization are on the same line , Typescript will figure out the type of `color` for us.
+
+but if we make like :
+
+```javascript
+let apples;
+apples = 5;
+```
+
+then the pop up after hover in apples is any .
+
+of if typescript can figure out these different types for us , why would we go throught the process of writing out the annotations manually ?
+
+so , we use Type annotations when :
+- we declare a variable on one line then initialize it later
+- we want a variable to have a type that cant be inferred
+- a function returns the 'any' type and we need to clarify the value.
+
+for more example se `varibales.ts`
+
+so , when to use Type inference is :
+## **ALWAYS!!**
+
+any type is :
+- A type, just as 'string' or 'boolean' are
+- Means TS has no idea what this is - cant check for corret property references.
+- **Avoid variables with 'any' at all costs** beacuse typescript cant do any error checking whatsoever around that value. example , if `coordinates` is any type that we can write like `coordinates.dfdsgsgsgsgsdg` and typescript does nothing because typescript cant checking.
+
+to know how to fix 'any' type see in `variables.ts`
+
+---
+**Type annotations for functions**
+
+>Type annotations for functions -> Code we add to tell Typescript what type of arguments a function will receive and what type of values it will return.
+
+>Type inference for functions -> Typescript tries to figure out what type of value a function will return.
+
+to see the example in `functions.ts`
+
+
+`void` mean that we have a function thats going to not return anything technically , but can retun  `null` and can return `undefined`
+
+`never` mean that we are never going to actually reach the end of this function. so we only annotate a function with the type never when we really truly never expect a function to return anything ever.   
+
+destructuring with annotations can check `functions.ts`
+
+for Objects in annotations can check `objects.ts`
+
+---
+
+Arrays in Typescript
+
+Same as array in javascript
+see in `araay.ts`
+
+why do we care :
+- TS can do type inference when extracting values from an array
+- TypeScript can help us prevent  from adding in incompatible values into
+- we get a lot of help with built in functions like map for each reduce and so on
+- we can, in fact, put different types of elements inside of an array.
+
+--- 
+
+## **Tuples in TS**
+
+Tuples -> Array-like structure where each element represents some property of a record ,
+example if we have object :
+
+```
+{
+    color :"brown",
+    carbonation : true ,
+    sugar : 40
+}
+```
+
+in tuples :
+```
+["brown" , true , 40]
+```
+
+index 0 must be color , index 1 must be carbonation and index 2 must be sugar , developer must memorize that.
+
+example in `tuples.ts`
+
+we not going to use tupples because when we are working at the tuple much harder to understand exactly what is going on at a glance different if we make that data into object.
+
+example :
+
+```javascript
+  const carSpecs: [number, number] = [400, 3354];
+  
+  const carStats = {
+    horsepower: 400,
+    weight: 3354
+  };
+```
+we can see , with easy we can know that 400 is horsepower ,and 3354 is weight in object however in tuples we are difficult to know what is the value mean.
+
+---
+
+## **Interface**
+
+interfaces -> Creates a new type, describing the property names and value types of an object .
+
+General Strategy for Reusable Code :
+
+- Create functions that accept arguments that are typed with interfaces.
+- Object/classes can decide to 'implement' a given interface to work with a function.
+
+
+
+
 
 
 
